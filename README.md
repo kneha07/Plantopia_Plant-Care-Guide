@@ -318,6 +318,6 @@ Have questions or want to collaborate? Let's connect!
 
 **Made with 🌿 and ☕ by Neha Kumari**
 
-*Last updated: January 2025*
+*Last updated: December 2025*
 
 </div>
