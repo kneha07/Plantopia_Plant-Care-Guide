@@ -1,0 +1,173 @@
+/* ================================
+   Filter Controls
+   ================================ */
+
+.filter-controls {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2rem;
+}
+
+/* ================================
+   Filter Group
+   ================================ */
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.filter-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.filter-select {
+  padding: 0.625rem 0.75rem;
+  font-size: 1rem;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .filter-select {
+    transition: border-color var(--transition-fast),
+      box-shadow var(--transition-fast);
+  }
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-secondary);
+}
+
+/* ================================
+   Checkbox Filter
+   ================================ */
+
+.filter-group-checkbox {
+  justify-content: flex-end;
+}
+
+.filter-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.filter-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkbox-custom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-bg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .checkbox-custom {
+    transition: background-color var(--transition-fast),
+      border-color var(--transition-fast);
+  }
+}
+
+.filter-checkbox:focus+.checkbox-custom {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-secondary);
+}
+
+.filter-checkbox:checked+.checkbox-custom {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.filter-checkbox:checked+.checkbox-custom::after {
+  content: '';
+  width: 6px;
+  height: 10px;
+  border: solid var(--color-text-inverse);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-bottom: 2px;
+}
+
+/* ================================
+   Reset Button
+   ================================ */
+
+.filter-reset-btn {
+  padding: 0.625rem 1rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-md);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .filter-reset-btn {
+    transition: background-color var(--transition-fast),
+      color var(--transition-fast);
+  }
+}
+
+.filter-reset-btn:hover,
+.filter-reset-btn:focus {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+.filter-reset-btn:focus {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ================================
+   Responsive Grid
+   ================================ */
+
+@media (min-width: 600px) {
+  .filter-controls {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filter-reset-btn {
+    grid-column: span 2;
+    justify-self: start;
+  }
+}
+
+@media (min-width: 900px) {
+  .filter-controls {
+    grid-template-columns: repeat(3, 1fr) auto auto auto;
+    align-items: end;
+  }
+
+  .filter-reset-btn {
+    grid-column: auto;
+  }
+}

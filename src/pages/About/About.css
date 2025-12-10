@@ -1,0 +1,160 @@
+/* ================================
+   About Page Header
+   ================================ */
+
+.about-header-section {
+  background-color: var(--color-bg-alt);
+  padding-bottom: 2rem;
+}
+
+/* ================================
+   Story Section
+   ================================ */
+
+.about-story .container {
+  max-width: 900px;
+}
+
+.story-content {
+  margin-bottom: 3rem;
+}
+
+.story-title {
+  font-size: 1.75rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.story-text {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+.story-text:last-child {
+  margin-bottom: 0;
+}
+
+/* ================================
+   Values
+   ================================ */
+
+.story-values {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.value-item {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+}
+
+.value-icon {
+  display: block;
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.value-title {
+  font-size: 1.125rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.value-text {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+@media (min-width: 600px) {
+  .story-values {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ================================
+   Care Tips (Tabs) Section
+   ================================ */
+
+.tabs-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ================================
+   FAQ Section
+   ================================ */
+
+.faq-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ================================
+   Contact Section
+   ================================ */
+
+.contact-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  padding: 2rem;
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-form .form-actions {
+  margin-top: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+/* ================================
+   Contact Success State
+   ================================ */
+
+.contact-success {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.success-icon {
+  display: block;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.success-title {
+  font-size: 1.5rem;
+  color: var(--color-success);
+  margin-bottom: 0.5rem;
+}
+
+.success-text {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+/* ================================
+   Responsive
+   ================================ */
+
+@media (min-width: 768px) {
+  .story-title {
+    font-size: 2rem;
+  }
+
+  .contact-form {
+    padding: 2.5rem;
+  }
+}

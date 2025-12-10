@@ -1,0 +1,110 @@
+/* ================================
+   Footer
+   ================================ */
+
+.footer {
+  background-color: var(--color-bg-alt);
+  border-top: 1px solid var(--color-border);
+  padding: 2rem 1rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  text-align: center;
+}
+
+/* ================================
+   Footer Brand
+   ================================ */
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+}
+
+/* ================================
+   Footer Social Links
+   ================================ */
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--color-text-muted);
+  border-radius: 50%;
+  background-color: var(--color-bg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .footer-social-link {
+    transition: background-color var(--transition-fast),
+      color var(--transition-fast),
+      transform var(--transition-fast);
+  }
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  transform: scale(1.1);
+}
+
+.footer-social-link:focus {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ================================
+   Footer Copyright
+   ================================ */
+
+.footer-copyright {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+/* ================================
+   Desktop Layout
+   ================================ */
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 2.5rem 2rem;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-copyright {
+    order: 0;
+  }
+
+  .footer-brand {
+    order: 1;
+  }
+
+  .footer-links {
+    order: 2;
+  }
+}

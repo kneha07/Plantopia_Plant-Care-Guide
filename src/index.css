@@ -1,0 +1,190 @@
+/* ================================
+   CSS Reset & Base Styles
+   ================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3 {
+  overflow-wrap: break-word;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+dialog {
+  margin: auto;
+}
+
+/* ================================
+   CSS Custom Properties (Theming)
+   ================================ */
+
+:root {
+  /* Light Theme (Default) */
+  --color-primary: #2d6a4f;
+  --color-primary-dark: #1b4332;
+  --color-primary-light: #40916c;
+  --color-secondary: #b7e4c7;
+  --color-accent: #d4a373;
+  --color-accent-dark: #bc8c5b;
+
+  --color-bg: #fefefe;
+  --color-bg-alt: #f1f5f2;
+  --color-bg-card: #ffffff;
+  --color-text: #1a1a1a;
+  --color-text-muted: #555555;
+  --color-text-inverse: #ffffff;
+
+  --color-border: #d1d5db;
+  --color-error: #c53030;
+  --color-error-bg: #fed7d7;
+  --color-success: #276749;
+  --color-success-bg: #c6f6d5;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+
+  --max-width: 1200px;
+  --header-height: 70px;
+}
+
+[data-theme="dark"] {
+  --color-primary: #52b788;
+  --color-primary-dark: #40916c;
+  --color-primary-light: #74c69d;
+  --color-secondary: #1b4332;
+  --color-accent: #ddb892;
+  --color-accent-dark: #c9a57a;
+
+  --color-bg: #121212;
+  --color-bg-alt: #1e1e1e;
+  --color-bg-card: #252525;
+  --color-text: #f0f0f0;
+  --color-text-muted: #a0a0a0;
+  --color-text-inverse: #1a1a1a;
+
+  --color-border: #404040;
+  --color-error: #fc8181;
+  --color-error-bg: #4a2020;
+  --color-success: #68d391;
+  --color-success-bg: #1a3a2a;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* ================================
+   Global Styles
+   ================================ */
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* ================================
+   Accessibility: Reduced Motion
+   ================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ================================
+   Utility Classes
+   ================================ */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}

@@ -1,0 +1,206 @@
+/* ================================
+   Plant Finder Header
+   ================================ */
+
+.finder-header-section {
+  background-color: var(--color-bg-alt);
+  padding-bottom: 2rem;
+}
+
+.finder-content-section {
+  padding-top: 0;
+}
+
+/* ================================
+   Quiz Form
+   ================================ */
+
+.finder-form {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ================================
+   Quiz Question
+   ================================ */
+
+.quiz-question {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.quiz-question-conditional {
+  border-left: 4px solid var(--color-primary);
+  background-color: var(--color-secondary);
+}
+
+[data-theme="dark"] .quiz-question-conditional {
+  background-color: var(--color-bg-alt);
+}
+
+.question-title {
+  font-size: 1.125rem;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.question-hint {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+/* ================================
+   Option Cards
+   ================================ */
+
+.question-options {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.question-options-row {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 500px) {
+  .question-options:not(.question-options-row) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .question-options-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.option-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--color-bg);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .option-card {
+    transition: border-color var(--transition-fast),
+      background-color var(--transition-fast),
+      transform var(--transition-fast);
+  }
+}
+
+.option-card:hover {
+  border-color: var(--color-primary-light);
+  transform: translateY(-2px);
+}
+
+.option-card.is-selected {
+  border-color: var(--color-primary);
+  background-color: var(--color-secondary);
+}
+
+.option-card:focus-within {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.option-card-compact {
+  padding: 0.75rem;
+}
+
+.option-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.option-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.option-desc {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+/* ================================
+   Form Actions
+   ================================ */
+
+.form-actions {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ================================
+   Results
+   ================================ */
+
+.finder-results {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.results-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.results-title {
+  font-size: 1.75rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.results-subtitle {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+}
+
+.results-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 500px) {
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.results-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.results-empty .empty-icon {
+  display: block;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.results-actions {
+  text-align: center;
+  margin-top: 2.5rem;
+}

@@ -1,0 +1,107 @@
+/* ================================
+   Accordion
+   ================================ */
+
+.accordion {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+/* ================================
+   Accordion Item
+   ================================ */
+
+.accordion-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+/* ================================
+   Accordion Heading & Trigger
+   ================================ */
+
+.accordion-heading {
+  margin: 0;
+}
+
+.accordion-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  background-color: var(--color-bg-card);
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .accordion-trigger {
+    transition: background-color var(--transition-fast);
+  }
+}
+
+.accordion-trigger:hover,
+.accordion-trigger:focus {
+  background-color: var(--color-bg-alt);
+}
+
+.accordion-trigger:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 3px var(--color-accent);
+}
+
+.accordion-title {
+  flex: 1;
+  padding-right: 1rem;
+}
+
+/* ================================
+   Accordion Icon
+   ================================ */
+
+.accordion-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-primary);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .accordion-icon {
+    transition: transform var(--transition-fast);
+  }
+}
+
+.accordion-icon.is-open {
+  transform: rotate(180deg);
+}
+
+/* ================================
+   Accordion Panel
+   ================================ */
+
+.accordion-panel {
+  overflow: hidden;
+}
+
+.accordion-panel:not(.is-open) {
+  display: none;
+}
+
+.accordion-content {
+  padding: 1rem 1.25rem 1.25rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+}
